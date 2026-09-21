@@ -1,29 +1,25 @@
-# grocery_app1
+# Grocery App1
 
-A new Flutter project.
+A modern Flutter grocery shopping application.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![Screenshot 1](./Screenshot%202026-09-21%20201406.png)
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot 2](./Screenshot%202026-09-21%20201415.png)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+![Screenshot 3](./Screenshot%202026-09-21%20201426.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 4](./Screenshot%202026-09-21%20201539.png)
 
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201406.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201415.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201426.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201539.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201549.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201600.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201613.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201626.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201640.png)
-![Screenshot 1]("https://github.com/mostafafaiz2020-byte/Grocery_app_final/blob/403c26cd2c5526cba598fce8ce917fa044c7a434/Screenshot%202026-09-21%20201652.png)
+![Screenshot 5](./Screenshot%202026-09-21%20201549.png)
 
+![Screenshot 6](./Screenshot%202026-09-21%20201600.png)
+
+![Screenshot 7](./Screenshot%202026-09-21%20201613.png)
+
+![Screenshot 8](./Screenshot%202026-09-21%20201626.png)
+
+![Screenshot 9](./Screenshot%202026-09-21%20201640.png)
+
+![Screenshot 10](./Screenshot%202026-09-21%20201653.png)
