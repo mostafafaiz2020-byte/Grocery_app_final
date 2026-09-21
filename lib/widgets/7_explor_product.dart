@@ -1,5 +1,4 @@
-// widgets/explor_product.dart
-
+// widgets/7_explor_product.dart
 import 'package:flutter/material.dart';
 
 Widget explor_product({
@@ -7,30 +6,27 @@ Widget explor_product({
   required String titel,
   required int color,
 }) {
-  return Column(
-    children: [
-      Container(
-        height: 189,
-        width: 174,
-        decoration: BoxDecoration(
-          color: Color(color),
-          borderRadius: BorderRadius.circular(19),
-        ),
-        padding: EdgeInsets.only(top: 27, right: 32, left: 32),
-        child: Column(
-          children: [
-            Image.asset(image),
+  return Container(
+    decoration: BoxDecoration(
+      color: Color(color),
+      borderRadius: BorderRadius.circular(19),
+    ),
+    padding: const EdgeInsets.all(18),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Expanded(child: Image.asset(image, fit: BoxFit.contain)),
 
-            SizedBox(height: 8),
+        const SizedBox(height: 8),
 
-            Text(
-              titel,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-            ),
-          ],
+        Text(
+          titel,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
         ),
-      ),
-    ],
+      ],
+    ),
   );
 }

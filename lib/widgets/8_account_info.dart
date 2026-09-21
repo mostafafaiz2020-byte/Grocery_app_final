@@ -1,5 +1,4 @@
-// widgets/account_info.dart
-
+// widgets/8_account_info.dart
 import 'package:flutter/material.dart';
 
 class AccountInfo extends StatelessWidget {
@@ -10,25 +9,28 @@ class AccountInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          child: Row(
-            children: [
-              Icon(icon),
-              const SizedBox(width: 15),
-              Expanded(
-                child: Text(
-                  text,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-                ),
-              ),
-              Icon(Icons.arrow_forward_ios),
-            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      child: Row(
+        children: [
+          Icon(icon),
+
+          const SizedBox(width: 15),
+
+          Expanded(
+            child: Text(
+              text,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            ),
           ),
-        ),
-      ],
+
+          const SizedBox(width: 10),
+
+          const Icon(Icons.arrow_forward_ios, size: 18),
+        ],
+      ),
     );
   }
 }

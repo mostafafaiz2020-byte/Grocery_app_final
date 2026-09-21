@@ -6,22 +6,22 @@ class TermsText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        style: TextStyle(fontSize: 12, color: Colors.grey),
-        children: [
-          TextSpan(text: 'By continuing you agree to our '),
-          TextSpan(
-            text: 'Terms of Service',
-            style: TextStyle(color: Color(0xFF53B878)),
-          ),
-          TextSpan(text: ' and '),
-          TextSpan(
-            text: 'Privacy Policy.',
-            style: TextStyle(color: Color(0xFF53B878)),
-          ),
-        ],
-      ),
+    return const Wrap(
+      children: [
+        Text(
+          'By continuing you agree to our ',
+          style: TextStyle(fontSize: 12, color: Colors.grey),
+        ),
+        Text(
+          'Terms of Service',
+          style: TextStyle(fontSize: 12, color: Color(0xFF53B878)),
+        ),
+        Text(' and ', style: TextStyle(fontSize: 12, color: Colors.grey)),
+        Text(
+          'Privacy Policy.',
+          style: TextStyle(fontSize: 12, color: Color(0xFF53B878)),
+        ),
+      ],
     );
   }
 }

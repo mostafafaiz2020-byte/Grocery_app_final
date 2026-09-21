@@ -1,6 +1,5 @@
 // widgets/2_register_login_row.dart
 import 'package:flutter/material.dart';
-
 import '../screens/3-loging.dart';
 
 class LoginRow extends StatelessWidget {
@@ -9,8 +8,8 @@ class LoginRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Wrap(
+        alignment: WrapAlignment.center,
         children: [
           const Text(
             'Already have an account? ',
@@ -20,7 +19,6 @@ class LoginRow extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-
           GestureDetector(
             onTap: () {
               Navigator.pushReplacement(

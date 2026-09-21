@@ -24,9 +24,7 @@ class EmailField extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-
         const SizedBox(height: 8),
-
         TextFormField(
           controller: controller,
           keyboardType: TextInputType.emailAddress,

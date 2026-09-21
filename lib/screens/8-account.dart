@@ -1,5 +1,4 @@
 // screens/8-account.dart
-
 import 'package:flutter/material.dart';
 import 'package:grocery_app1/screens/1-home.dart';
 import 'package:grocery_app1/widgets/8_account_info.dart';
@@ -10,115 +9,142 @@ class Account extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+    return SafeArea(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.only(bottom: 20),
+        child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.all(15),
-              child: Container(
-                height: 64,
-                width: 64,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/profale.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-
-            const SizedBox(width: 20),
-
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
                 children: [
-                  const Text(
-                    '𝑴𝒐𝒔𝒕𝒂𝒇𝒂 𝑭𝒂𝒊𝒛',
-                    style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+                  Container(
+                    height: 64,
+                    width: 64,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/profale.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
 
-                  const Text(
-                    '✉️ 𝒎𝒐𝒔𝒕𝒂𝒇𝒂.𝒇𝒂𝒊𝒛𝟐𝟎𝟐𝟎@𝒈𝒎𝒂𝒊𝒍.𝒄𝒐𝒎',
-                    style: TextStyle(
-                      color: Color(0xff7C7C7C),
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
+                  const SizedBox(width: 20),
+
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          '𝑴𝒐𝒔𝒕𝒂𝒇𝒂 𝑭𝒂𝒊𝒛',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 20,
+                          ),
+                        ),
+
+                        const SizedBox(height: 4),
+
+                        Text(
+                          '✉️ 𝒎𝒐𝒔𝒕𝒂𝒇𝒂.𝒇𝒂𝒊𝒛𝟐𝟎𝟐𝟎@𝒈𝒎𝒂𝒊𝒍.𝒄𝒐𝒎',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            color: Color(0xff7C7C7C),
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
-          ],
-        ),
 
-        const SizedBox(height: 5),
+            const Divider(),
 
-        const Divider(),
-        AccountInfo(icon: Icons.shopping_bag_outlined, text: 'Order'),
-        const Divider(),
-        AccountInfo(icon: Icons.contact_page_outlined, text: 'My Details'),
-        const Divider(),
-        AccountInfo(icon: Icons.location_on_outlined, text: 'Delivery Address'),
-        const Divider(),
-        AccountInfo(icon: Icons.credit_card_outlined, text: 'Payment Methods'),
-        const Divider(),
-        AccountInfo(
-          icon: Icons.confirmation_number_outlined,
-          text: 'Promo Cord',
-        ),
-        const Divider(),
-        AccountInfo(
-          icon: Icons.notifications_none_outlined,
-          text: 'Notifecations ',
-        ),
-        const Divider(),
-        AccountInfo(icon: Icons.help_outline, text: 'Help'),
-        const Divider(),
-        AccountInfo(icon: Icons.error_outline, text: 'About '),
-        const Divider(),
-        SizedBox(height: 53),
-        Container(
-          width: 364,
-          height: 67,
-          decoration: BoxDecoration(
-            color: Color(0xffF2F3F2),
-            borderRadius: BorderRadius.circular(19),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(Icons.logout_outlined, color: Color(0xff53B175)),
-                SizedBox(width: 100),
-                GestureDetector(
+            const AccountInfo(icon: Icons.shopping_bag_outlined, text: 'Order'),
+            const Divider(),
+
+            const AccountInfo(
+              icon: Icons.contact_page_outlined,
+              text: 'My Details',
+            ),
+            const Divider(),
+
+            const AccountInfo(
+              icon: Icons.location_on_outlined,
+              text: 'Delivery Address',
+            ),
+            const Divider(),
+
+            const AccountInfo(
+              icon: Icons.credit_card_outlined,
+              text: 'Payment Methods',
+            ),
+            const Divider(),
+
+            const AccountInfo(
+              icon: Icons.confirmation_number_outlined,
+              text: 'Promo Cord',
+            ),
+            const Divider(),
+
+            const AccountInfo(
+              icon: Icons.notifications_none_outlined,
+              text: 'Notifecations',
+            ),
+            const Divider(),
+
+            const AccountInfo(icon: Icons.help_outline, text: 'Help'),
+            const Divider(),
+
+            const AccountInfo(icon: Icons.error_outline, text: 'About'),
+            const Divider(),
+
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+              child: SizedBox(
+                width: double.infinity,
+                height: 67,
+                child: GestureDetector(
                   onTap: () {
                     showMaterialModalBottomSheet(
                       context: context,
                       builder: (context) {
-                        return Home();
+                        return const Home();
                       },
                     );
                   },
-                  child: Text(
-                    'Log Out',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: Color(0xff53B175),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xffF2F3F2),
+                      borderRadius: BorderRadius.circular(19),
+                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: const Row(
+                      children: [
+                        Icon(Icons.logout_outlined, color: Color(0xff53B175)),
+                        SizedBox(width: 15),
+                        Text(
+                          'Log Out',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18,
+                            color: Color(0xff53B175),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

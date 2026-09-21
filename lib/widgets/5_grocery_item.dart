@@ -9,41 +9,35 @@ class GroceryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 250,
-
-          padding: const EdgeInsets.all(15),
-
-          decoration: BoxDecoration(
-            color: Color(0xffF8A44C),
-            border: Border.all(color: const Color.fromARGB(255, 179, 172, 172)),
-            borderRadius: BorderRadius.circular(18),
+    return Container(
+      width: 250,
+      padding: const EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: const Color(0xffF8A44C),
+        border: Border.all(color: const Color.fromARGB(255, 179, 172, 172)),
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: Row(
+        children: [
+          Image.asset(
+            productModel2.image,
+            width: 50,
+            height: 50,
+            fit: BoxFit.contain,
           ),
 
-          child: Row(
-            children: [
-              Image.asset(
-                productModel2.image,
-                width: 50,
-                height: 50,
-                fit: BoxFit.contain,
-              ),
+          const SizedBox(width: 15),
 
-              const SizedBox(width: 15),
-
-              Text(
-                productModel2.titel,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ],
+          Expanded(
+            child: Text(
+              productModel2.titel,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

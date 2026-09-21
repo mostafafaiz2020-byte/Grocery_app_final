@@ -1,5 +1,4 @@
 // screens/5-Shop.dart
-
 import 'package:flutter/material.dart';
 
 import 'package:grocery_app1/widgets/5_%20Shop%20Slider.dart';
@@ -21,36 +20,25 @@ class _ShopState extends State<Shop> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
-            child: Column(
-              children: [
-                const ShopHeader(),
-
-                const SizedBox(height: 20),
-
-                const SearchStore(),
-
-                const SizedBox(height: 20),
-
-                const slider(),
-
-                const SizedBox(height: 20),
-
-                const Exclusiveoffer(),
-
-                const SizedBox(height: 30),
-
-                const Bestselling(),
-
-                const SizedBox(height: 30),
-
-                const Groceries(),
-              ],
-            ),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: const [
+              ShopHeader(),
+              SizedBox(height: 20),
+              SearchStore(),
+              SizedBox(height: 20),
+              SliderWidget(),
+              SizedBox(height: 20),
+              Exclusiveoffer(),
+              SizedBox(height: 30),
+              Bestselling(),
+              SizedBox(height: 30),
+              Groceries(),
+              SizedBox(height: 20),
+            ],
           ),
         ),
       ),

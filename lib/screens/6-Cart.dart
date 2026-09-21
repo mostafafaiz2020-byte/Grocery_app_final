@@ -1,7 +1,7 @@
 // screens/6-Cart.dart
 import 'package:flutter/material.dart';
 import 'package:grocery_app1/widgets/6_cart_product.dart';
-import 'package:grocery_app1/widgets/6_chek_botton.dart';
+import 'package:grocery_app1/widgets/6_chek_botton.dart' hide cartproduct;
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class Cart extends StatelessWidget {
@@ -15,24 +15,21 @@ class Cart extends StatelessWidget {
         child: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 6, right: 32, left: 32),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '🛒 𝑴𝒚 𝑪𝒂𝒓𝒕 🛒',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
-                  ),
-                ],
+              padding: EdgeInsets.only(top: 6, right: 24, left: 24),
+              child: Text(
+                '🛒 𝑴𝒚 𝑪𝒂𝒓𝒕 🛒',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
               ),
             ),
 
-            const SizedBox(height: 32),
+            const SizedBox(height: 25),
 
             const Divider(color: Colors.black),
 
             Expanded(
               child: ListView(
+                padding: EdgeInsets.zero,
                 children: [
                   cartproduct(
                     image: "assets/images/Bell Pepper Red.png",
@@ -40,7 +37,6 @@ class Cart extends StatelessWidget {
                     price: "\$4.99",
                     detail: "1kg, Price",
                   ),
-
                   const Divider(color: Colors.black),
 
                   cartproduct(
@@ -49,7 +45,6 @@ class Cart extends StatelessWidget {
                     price: "\$1.99",
                     detail: "4pcs, Price",
                   ),
-
                   const Divider(color: Colors.black),
 
                   cartproduct(
@@ -59,14 +54,15 @@ class Cart extends StatelessWidget {
                     detail: "12kg, Price",
                   ),
                   const Divider(color: Colors.black),
+
                   cartproduct(
                     image: "assets/images/Ginger.png",
                     name: "Ginger",
                     price: "\$2.99",
                     detail: "250gm, Price",
                   ),
-
                   const Divider(color: Colors.black),
+
                   cartproduct(
                     image: "assets/images/Group 6874.png",
                     name: "Sprite Can",
@@ -75,35 +71,38 @@ class Cart extends StatelessWidget {
                   ),
 
                   const Divider(color: Colors.black),
-                  GestureDetector(
-                    onTap: () {
-                      showMaterialModalBottomSheet(
-                        context: context,
 
-                        builder: (context) {
-                          return const ChekBotton();
-                        },
-                      );
-                    },
-
-                    child: Container(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 15,
+                    ),
+                    child: SizedBox(
                       width: double.infinity,
                       height: 67,
-
-                      alignment: Alignment.center,
-
-                      decoration: BoxDecoration(
-                        color: const Color(0xff53B175),
-                        borderRadius: BorderRadius.circular(19),
-                      ),
-
-                      child: const Text(
-                        "Go to Checkout",
-
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w800,
-                          color: Color(0XFFFCFCFC),
+                      child: GestureDetector(
+                        onTap: () {
+                          showMaterialModalBottomSheet(
+                            context: context,
+                            builder: (context) {
+                              return const ChekBotton();
+                            },
+                          );
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff53B175),
+                            borderRadius: BorderRadius.circular(19),
+                          ),
+                          child: const Text(
+                            "Go to Checkout",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0XFFFCFCFC),
+                            ),
+                          ),
                         ),
                       ),
                     ),

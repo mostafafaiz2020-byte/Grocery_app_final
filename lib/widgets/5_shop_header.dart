@@ -8,22 +8,29 @@ class ShopHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Center(child: Image.asset('assets/images/carrot.png')),
+        Center(
+          child: Image.asset(
+            'assets/images/carrot.png',
+            width: 55,
+            height: 55,
+            fit: BoxFit.contain,
+          ),
+        ),
 
         const SizedBox(height: 21),
 
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const Text(
-              '𓆩♡𓆪 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒄𝒌, 𝑴𝒐𝒔𝒕𝒂𝒇𝒂 𓆩♡𓆪',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                color: Color(0xff4C4F4D),
-                fontSize: 18,
-              ),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            '𓆩♡𓆪 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒄𝒌, 𝑴𝒐𝒔𝒕𝒂𝒇𝒂 𓆩♡𓆪',
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+              color: Color(0xff4C4F4D),
+              fontSize: 18,
             ),
-          ],
+          ),
         ),
       ],
     );

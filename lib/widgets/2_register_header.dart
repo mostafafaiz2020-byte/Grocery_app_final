@@ -17,9 +17,7 @@ class RegisterHeader extends StatelessWidget {
             color: Color(0xFF20212B),
           ),
         ),
-
         SizedBox(height: 8),
-
         Text(
           'Enter your credentials to continue',
           style: TextStyle(fontSize: 14, color: Colors.grey),

@@ -26,9 +26,7 @@ class PasswordField extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-
         const SizedBox(height: 8),
-
         TextFormField(
           controller: controller,
           obscureText: isPasswordHidden,

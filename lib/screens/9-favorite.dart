@@ -1,7 +1,5 @@
 // screens/9-favorite.dart
 
-// screens/9-favorite.dart
-
 import 'package:flutter/material.dart';
 
 class Favorite extends StatelessWidget {
@@ -14,25 +12,19 @@ class Favorite extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Title
             const Padding(
-              padding: EdgeInsets.only(top: 6, right: 32, left: 32),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '𓆩♡𓆪 𝑭𝒂𝒗𝒐𝒓𝒊𝒕𝒆 𓆩♡𓆪',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
-                  ),
-                ],
+              padding: EdgeInsets.only(top: 6, right: 24, left: 24),
+              child: Text(
+                '𓆩♡𓆪 𝑭𝒂𝒗𝒐𝒓𝒊𝒕𝒆 𓆩♡𓆪',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
               ),
             ),
 
-            const SizedBox(height: 32),
+            const SizedBox(height: 25),
 
             const Divider(color: Colors.black),
 
-            // Products List
             Expanded(
               child: ListView(
                 children: [
@@ -42,7 +34,6 @@ class Favorite extends StatelessWidget {
                     detail: "325ml, Price",
                     price: "\$1.50",
                   ),
-
                   const Divider(color: Colors.black),
 
                   buildProductItem(
@@ -51,7 +42,6 @@ class Favorite extends StatelessWidget {
                     detail: "325ml, Price",
                     price: "\$1.95",
                   ),
-
                   const Divider(color: Colors.black),
 
                   buildProductItem(
@@ -60,7 +50,6 @@ class Favorite extends StatelessWidget {
                     detail: "2L, Price",
                     price: "\$15.50",
                   ),
-
                   const Divider(color: Colors.black),
 
                   buildProductItem(
@@ -69,7 +58,6 @@ class Favorite extends StatelessWidget {
                     detail: "325ml, Price",
                     price: "\$4.99",
                   ),
-
                   const Divider(color: Colors.black),
 
                   buildProductItem(
@@ -78,7 +66,6 @@ class Favorite extends StatelessWidget {
                     detail: "325ml, Price",
                     price: "\$4.99",
                   ),
-
                   const Divider(color: Colors.black),
 
                   buildProductItem(
@@ -92,25 +79,26 @@ class Favorite extends StatelessWidget {
               ),
             ),
 
-            // Add All To Cart Button
             Padding(
               padding: const EdgeInsets.only(
                 top: 15,
-                right: 25,
-                left: 25,
-                bottom: 24,
+                right: 20,
+                left: 20,
+                bottom: 20,
               ),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 height: 67,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: const Color(0xff53B175),
-                  borderRadius: BorderRadius.circular(19),
-                ),
-                child: const Text(
-                  "Add All To Cart",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff53B175),
+                    borderRadius: BorderRadius.circular(19),
+                  ),
+                  child: const Text(
+                    "Add All To Cart",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                  ),
                 ),
               ),
             ),
@@ -120,18 +108,17 @@ class Favorite extends StatelessWidget {
     );
   }
 
-  Widget buildProductItem({
+  static Widget buildProductItem({
     required String image,
     required String name,
     required String detail,
     required String price,
   }) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(image, width: 70, height: 70),
+          Image.asset(image, width: 70, height: 70, fit: BoxFit.contain),
 
           const SizedBox(width: 15),
 
@@ -141,6 +128,8 @@ class Favorite extends StatelessWidget {
               children: [
                 Text(
                   name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -161,12 +150,14 @@ class Favorite extends StatelessWidget {
             ),
           ),
 
+          const SizedBox(width: 8),
+
           Text(
             price,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           ),
 
-          const SizedBox(width: 10),
+          const SizedBox(width: 8),
 
           const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black54),
         ],

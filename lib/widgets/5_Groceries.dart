@@ -1,10 +1,8 @@
 // widgets/5_Groceries.dart
-
 import 'package:flutter/material.dart';
 
 import 'package:grocery_app1/model/Groceries_model.dart';
 import 'package:grocery_app1/model/product_model.dart';
-
 import 'package:grocery_app1/widgets/5_grocery_item.dart';
 import 'package:grocery_app1/widgets/5_product_item.dart';
 
@@ -14,18 +12,16 @@ class Groceries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // =========================
-        // Groceries + See all
-        // =========================
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              'Groceries',
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
+            const Expanded(
+              child: Text(
+                'Groceries',
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
+              ),
             ),
-
             const Text(
               'See all',
               style: TextStyle(
@@ -39,43 +35,34 @@ class Groceries extends StatelessWidget {
 
         const SizedBox(height: 20),
 
-        // =========================
-        // Groceries Products
-        // =========================
         SizedBox(
           height: 100.51,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemCount: groceriesProducts.length,
-
             itemBuilder: (context, index) {
-              ProductModel2 product = groceriesProducts[index];
+              final ProductModel2 product = groceriesProducts[index];
 
               return GroceryItem(productModel2: product);
             },
-
             separatorBuilder: (context, index) {
               return const SizedBox(width: 10);
             },
           ),
         ),
 
-        // =========================
-        // Best Selling / Meat
-        // =========================
+        const SizedBox(height: 15),
+
         SizedBox(
           height: 248.51,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
-
             itemCount: products_Meat.length,
-
             itemBuilder: (context, index) {
-              ProductModel product = products_Meat[index];
+              final ProductModel product = products_Meat[index];
 
               return Exclusive(productModel: product);
             },
-
             separatorBuilder: (context, index) {
               return const SizedBox(width: 10);
             },
@@ -86,35 +73,24 @@ class Groceries extends StatelessWidget {
   }
 }
 
-// =====================================
-// Groceries Products
-// =====================================
-
-List<ProductModel2> groceriesProducts = [
+final List<ProductModel2> groceriesProducts = [
   ProductModel2(image: 'assets/images/gg.png', titel: 'Pulses'),
-
   ProductModel2(image: 'assets/images/ss.png', titel: 'Rice'),
 ];
 
-// =====================================
-// Meat Products
-// =====================================
-
-List<ProductModel> products_Meat = [
+final List<ProductModel> products_Meat = [
   ProductModel(
     image: 'assets/images/pngfuel 4 (1).png',
     titel: 'Beef Bone',
     descripion: '1kg, Priceg',
     price: 4.5,
   ),
-
   ProductModel(
     image: 'assets/images/pngfuel 9.png',
     titel: 'Meat & Fish',
     descripion: '1kg, Priceg',
     price: 8,
   ),
-
   ProductModel(
     image: 'assets/images/Group 6837.png',
     titel: 'Dairy & Eggs',

@@ -37,12 +37,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     setState(() {});
   }
 
-  void signup() {
-    if (formKey.currentState!.validate()) {
-      debugPrint('Account Created Successfully');
-    }
-  }
-
   @override
   void dispose() {
     usernameController.dispose();
@@ -65,18 +59,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
               colors: [Color(0xFFFFF7F5), Colors.white, Color(0xFFF9F7FF)],
             ),
           ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 22),
+          child: SingleChildScrollView(
+            keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+            padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 30),
             child: Form(
               key: formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 55),
+                  const SizedBox(height: 25),
 
                   const LoginLogo(),
 
-                  const SizedBox(height: 55),
+                  const SizedBox(height: 45),
 
                   const RegisterHeader(),
 
@@ -122,6 +117,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 16),
 
                   const LoginRow(),
+
+                  const SizedBox(height: 20),
                 ],
               ),
             ),

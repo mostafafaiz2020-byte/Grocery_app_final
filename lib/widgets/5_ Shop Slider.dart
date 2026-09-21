@@ -3,67 +3,70 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class slider extends StatefulWidget {
-  const slider({super.key});
+class SliderWidget extends StatefulWidget {
+  const SliderWidget({super.key});
 
   @override
-  State<slider> createState() => _sliderState();
+  State<SliderWidget> createState() => _SliderWidgetState();
 }
 
-class _sliderState extends State<slider> {
+class _SliderWidgetState extends State<SliderWidget> {
   int activeIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return   Stack(
-                  children: [
-                    CarouselSlider(
-                      options: CarouselOptions(
-                        height: 119.0,
-                        autoPlay: true,
-                        viewportFraction: 1,
-                        onPageChanged: (index, reason) {
-                          setState(() {
-                            activeIndex = index;
-                          });
-                        },
-                      ),
-                      items: images.map((i) {
-                        return Container(
-                          width: double.infinity,
-                          alignment: Alignment.bottomCenter,
-                          padding: const EdgeInsets.symmetric(vertical: 7),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(18),
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.network(i).image,
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                    ),
+    return Stack(
+      children: [
+        CarouselSlider(
+          options: CarouselOptions(
+            height: 119,
+            autoPlay: true,
+            viewportFraction: 1,
+            onPageChanged: (index, reason) {
+              setState(() {
+                activeIndex = index;
+              });
+            },
+          ),
+          items: images.map((imageUrl) {
+            return Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 7),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(18),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: Image.network(imageUrl).image,
+                ),
+              ),
+            );
+          }).toList(),
+        ),
 
-                    Positioned(
-                      bottom: 10,
-                      left: 130,
-                      child: AnimatedSmoothIndicator(
-                        activeIndex: activeIndex,
-                        count: images.length,
-                        effect: const ExpandingDotsEffect(
-                          activeDotColor: Color(0XFF53B175),
-                          dotColor: Colors.grey,
-                          dotHeight: 10,
-                          dotWidth: 10,
-                          spacing: 4,
-                        ),
-                      ),
-                    ),
-                  ],
-                );
-                
+        Positioned(
+          bottom: 10,
+          left: 0,
+          right: 0,
+          child: Center(
+            child: AnimatedSmoothIndicator(
+              activeIndex: activeIndex,
+              count: images.length,
+              effect: const ExpandingDotsEffect(
+                activeDotColor: Color(0XFF53B175),
+                dotColor: Colors.grey,
+                dotHeight: 10,
+                dotWidth: 10,
+                spacing: 4,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
-List<String> images = [
+
+final List<String> images = [
   'https://template.canva.com/EAG0JxK0Nu8/2/0/400w-SVjZ7T3udzk.jpg',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZr06K0mARQU0XudsZCRhmu1dS6c7hzkCYFyg6LT87c2IphmYG-R-MwSEw&s=10',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQTQpWB8sXJsNe4475G1bRUoOJXtol9rnm3aUyvWDTEWKOYJ-QFCElR8y&s=10',

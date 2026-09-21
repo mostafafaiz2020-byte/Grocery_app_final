@@ -11,19 +11,16 @@ class Exclusiveoffer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Exclusive Offer + See all
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              'Exclusive Offer',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 24,
+            const Expanded(
+              child: Text(
+                'Exclusive Offer',
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
               ),
             ),
-
             const Text(
               'See all',
               style: TextStyle(
@@ -37,19 +34,16 @@ class Exclusiveoffer extends StatelessWidget {
 
         const SizedBox(height: 20),
 
-        // Products
         SizedBox(
           height: 248.51,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemCount: products.length,
-
             itemBuilder: (context, index) {
-              ProductModel product = products[index];
+              final ProductModel product = products[index];
 
               return GestureDetector(
                 onTap: () {
-                  // المنتج الثاني
                   if (index == 1) {
                     Navigator.push(
                       context,
@@ -59,13 +53,9 @@ class Exclusiveoffer extends StatelessWidget {
                     );
                   }
                 },
-
-                child: Exclusive(
-                  productModel: product,
-                ),
+                child: Exclusive(productModel: product),
               );
             },
-
             separatorBuilder: (context, index) {
               return const SizedBox(width: 10);
             },
