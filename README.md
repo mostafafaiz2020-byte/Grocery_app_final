@@ -18,12 +18,51 @@ samples, guidance on mobile development, and a full API reference.
 
 ![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
 
-![Screenshot 2](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162538.png?raw=true)
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
 
-![Screenshot 3](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162616.png?raw=true)
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
 
-![Screenshot 4](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-19%20214140.png?raw=true)
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
 
-![Screenshot 5](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-27%20025310.png?raw=true)
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
 
-![Screenshot 6](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-27%20025342.png?raw=true)
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
+![Screenshot 1](https://github.com/mostafafaiz2020-byte/Grocery_app12/blob/main/Screenshot%202026-08-17%20162431.png?raw=true)
+
